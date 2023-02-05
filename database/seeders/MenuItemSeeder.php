@@ -1,0 +1,33 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\MenuItem;
+use Illuminate\Database\Seeder;
+
+class MenuItemSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 1, 'name_kk' => 'Classic чизбургер', 'name_ru' => 'Classic чизбургер', 'description_kk' => 'Сиыр еті, қызанақ, салат, пияз, ірімшік, фирмалық соус', 'description_ru' => 'Говяжья котлета, томат, лист салата, лук, сыр, фирменный соус', 'order_number' => 1, 'price' => '890', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/burger_230x130.jpg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/burger-cooking.gif']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 1, 'name_kk' => 'Chicken бургер', 'name_ru' => 'Chicken бургер', 'description_kk' => 'Тауық котлеті, қызанақ, салат, пияз, ірімшік, фирмалық тұздық', 'description_ru' => 'Куриная котлета, томаты, лист салата, лук, сыр, фирменный соус', 'order_number' => 2, 'price' => '910', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/ee616fd2d4082745_middle.png', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/burger-4-syra.jpg']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 1, 'name_kk' => 'Криспи Chicken', 'name_ru' => 'Криспи Chicken', 'description_kk' => 'Қытырлақ ұнға пісірілген тауық еті, қызанақ, салат жапырағы, пияз, ірімшік, фирмалық тұздық', 'description_ru' => 'Куриное филе в хрустящей панировке, томаты, лист салата, лук, сыр, фирменный соус', 'order_number' => 3, 'price' => '950', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/hqdefault.jpg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/big_1628580884.png']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 1, 'name_kk' => 'Egg бургер', 'name_ru' => 'Egg бургер', 'description_kk' => 'Тауық еті, жұмыртқа, қызанақ, салат жапырағы, ірімшік, фирмалық тұздық', 'description_ru' => 'Куриное филе, яичница, томаты, лист салата, сыр, фирменный соус', 'order_number' => 4, 'price' => '1220', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/mqdefault.jpg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/Fried-Egg-Burger-recipe-photo-0478.jpg']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 1, 'name_kk' => '"Қара алтын" бургері', 'name_ru' => 'Бургер "Черное золото"', 'description_kk' => 'Сиыр еті, қызанақ, маринадталған қияр, салат жапырағы, ірімшік, фирмалық тұздық', 'description_ru' => 'Говяжья котлета, томаты, маринованные огурцы, лист салата, сыр, фирменный соус', 'order_number' => 5, 'price' => '650', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/chernyj-burger-1.jpeg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/chernamamba.png']);
+
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 2, 'name_kk' => 'Каппа Маки', 'name_ru' => 'Каппа Маки', 'description_kk' => '8 дана', 'description_ru' => '8 штук', 'order_number' => 1, 'price' => '1890', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/24dcab09d7dbde7f518a713b640338d2.png', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/24dcab09d7dbde7f518a713b640338d2.png']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 2, 'name_kk' => 'Сяке Маки', 'name_ru' => 'Сяке Маки', 'description_kk' => '8 дана', 'description_ru' => '8 штук', 'order_number' => 2, 'price' => '1920', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/recipe_cf265ecc-4b7f-4361-9bc8-7398c712aa7a_w450.jpg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/recipe_cf265ecc-4b7f-4361-9bc8-7398c712aa7a_w450.jpg']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 2, 'name_kk' => 'Аляска', 'name_ru' => 'Аляска', 'description_kk' => '10 дана', 'description_ru' => '10 штук', 'order_number' => 3, 'price' => '2300', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/alaska-shutterstock_97588298.jpg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/alaska-shutterstock_97588298.jpg']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 2, 'name_kk' => 'Филадельфия', 'name_ru' => 'Филадельфия', 'description_kk' => '12 дана', 'description_ru' => '12 штук', 'order_number' => 4, 'price' => '1500', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/filadelfia.jpg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/filadelfia.jpg']);
+
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 3, 'name_kk' => 'Классикалық дөнер', 'name_ru' => 'Донер классический', 'description_kk' => 'Гриль тауық еті, жаңа піскен қияр мен қызанақ, фри картобы, фирмалық тұздық', 'description_ru' => 'Курица гриль, свежие огурцы и томаты, картофель фри, фирменный соус', 'order_number' => 1, 'price' => '780', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/thumb_23425_news_main.jpeg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/thumb_23425_news_main.jpeg']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 3, 'name_kk' => 'Дөнер ірімшікпен', 'name_ru' => 'Донер с сыром', 'description_kk' => 'Гриль тауық еті, жаңа піскен қияр мен қызанақ, фри картобы, ірімшік, фирмалық тұздық', 'description_ru' => 'Курица гриль, свежие огурцы и томаты, картофель фри, сыр, фирменный соус', 'order_number' => 2, 'price' => '850', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/shaurma-kak-v-larke-770x513.jpg', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/shaurma-kak-v-larke-770x513.jpg']);
+        MenuItem::create(['restaurant_id' => 1, 'category_id' => 3, 'name_kk' => 'Дэнер', 'name_ru' => 'Донер', 'description_kk' => 'Гриль сиыр еті, жаңа піскен қияр мен қызанақ, фри картобы, ірімшік, фирмалық тұздық', 'description_ru' => 'Говяжьи гриль, свежие огурцы и томаты, картофель фри, сыр, фирменный соус', 'order_number' => 3, 'price' => '750', 'poster_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/d4775e81-bda0-4f3c-ad03-c0c56ea2c227.png', 'image_url' => 'https://restaurant.object.pscloud.io/dynamic/items/demo/2023/05/d4775e81-bda0-4f3c-ad03-c0c56ea2c227.png']);
+
+    }
+}
