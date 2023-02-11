@@ -22,6 +22,7 @@ class ItemResource extends JsonResource
             "image_url" => $this->image_url,
             "price" => $this->price,
             "is_available_for_order" => $this->is_available_for_order,
+            "in_cart" => false
         ];
     }
 }
