@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Portal\PositionController;
 use App\Http\Controllers\Portal\RestaurantController as PortalRestaurantController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\SignController;
@@ -37,6 +38,8 @@ Route::group(['prefix' => '/{lang}'], function() {
         Route::middleware(['auth:sanctum'])->group(function () {
 
             Route::apiResource('restaurants', PortalRestaurantController::class)->middleware('role:Super Admin');
+
+            Route::apiResource('positions', PositionController::class)->middleware('role:Super Admin');
 
         });
 
