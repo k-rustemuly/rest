@@ -3,20 +3,20 @@
 namespace App\Http\Controllers\Portal;
 
 use App\Http\Controllers\BaseController;
-use App\Models\Position;
-use App\Http\Requests\StorePositionRequest;
-use App\Http\Requests\UpdatePositionRequest;
-use App\Modules\Services\Portal\PositionService;
+use App\Models\Category;
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
+use App\Modules\Services\Portal\CategoryService;
 use Illuminate\Http\Request;
 
-class PositionController extends BaseController
+class CategoryController extends BaseController
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, PositionService $service)
+    public function index(Request $request, CategoryService $service)
     {
         return $this->success($service->list($request->all()));
     }
@@ -24,10 +24,10 @@ class PositionController extends BaseController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePositionRequest  $request
+     * @param  \App\Http\Requests\StoreCategoryRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePositionRequest $request, PositionService $service)
+    public function store(StoreCategoryRequest $request, CategoryService $service)
     {
         return $this->success($service->add($request->validated()));
     }
@@ -35,10 +35,10 @@ class PositionController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Position $position)
+    public function show(Category $category)
     {
         //
     }
@@ -46,11 +46,11 @@ class PositionController extends BaseController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatePositionRequest  $request
-     * @param  \App\Models\Position  $position
+     * @param  \App\Http\Requests\UpdateCategoryRequest  $request
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePositionRequest $request, Position $position)
+    public function update(UpdateCategoryRequest $request, Category $category)
     {
         //
     }
@@ -58,10 +58,10 @@ class PositionController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Position $position)
+    public function destroy(Category $category)
     {
         //
     }

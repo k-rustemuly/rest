@@ -2,10 +2,10 @@
 
 namespace App\Modules\Services\Portal;
 
-use App\Http\Resources\Portal\PositionsResource;
-use App\Models\Position;
+use App\Http\Resources\Portal\CategoriesResource;
+use App\Models\Category;
 
-class PositionService
+class CategoryService
 {
     /**
      * Список позиции
@@ -16,11 +16,11 @@ class PositionService
      */
     public function list(array $params)
     {
-        return PositionsResource::collection(Position::list($params))->response()->getData(true);
+        return CategoriesResource::collection(Category::list($params))->response()->getData(true);
     }
 
     public function add(array $fields)
     {
-        return Position::create($fields);
+        return Category::create($fields);
     }
 }

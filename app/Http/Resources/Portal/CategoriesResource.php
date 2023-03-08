@@ -5,7 +5,7 @@ namespace App\Http\Resources\Portal;
 use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PositionsResource extends JsonResource
+class CategoriesResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,8 +19,8 @@ class PositionsResource extends JsonResource
             "id" => $this->id,
             "name_kk" => $this->name_kk,
             "name_ru" => $this->name_ru,
-            "created_at" => Carbon::parse($this->created_at)->isoFormat('MMMM Do YYYY, hh:mm'),
-            "updated_at" => Carbon::parse($this->updated_at)->isoFormat('MMMM Do YYYY, hh:mm'),
+            "created_at" => Carbon::parse($this->created_at)->isoFormat('MMMM Do YYYY, HH:mm'),
+            "updated_at" => Carbon::parse($this->updated_at)->isoFormat('MMMM Do YYYY, HH:mm'),
         ];
     }
 }
