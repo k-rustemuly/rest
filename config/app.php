@@ -198,6 +198,8 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
 
         EloquentFilter\ServiceProvider::class,
+
+        App\Providers\MacroServiceProvider::class,
     ],
 
     /*

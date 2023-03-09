@@ -4,7 +4,9 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Portal\CategoryController as PortalCategoryController;
+use App\Http\Controllers\Portal\ItemController as PortalItemController;
 use App\Http\Controllers\Portal\RestaurantController as PortalRestaurantController;
+use App\Http\Controllers\Portal\UploadController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\SignController;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => '/{lang}'], function() {
+Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setlocale')->group(function () {
 
     Route::get('about/{slug}', [RestaurantController::class, 'show']);
 
@@ -41,8 +43,12 @@ Route::group(['prefix' => '/{lang}'], function() {
 
             Route::apiResource('categories', PortalCategoryController::class)->middleware('role:Super Admin');
 
+            Route::apiResource('categories.items', PortalItemController::class)->shallow()->middleware('role:Super Admin');
+
+            Route::post('uploads', [UploadController::class, 'store'])->middleware('role:Super Admin');
+
         });
 
     });
 
-})->whereIn('lang', ['kk', 'ru', 'en']);
+});
