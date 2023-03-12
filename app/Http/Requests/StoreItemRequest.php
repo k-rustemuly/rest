@@ -13,7 +13,7 @@ class StoreItemRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class StoreItemRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name_kk' => 'required|string|max:255',
+            'name_ru' => 'required|string|max:255',
+            'description_kk' => 'required|string|max:255',
+            'description_ru' => 'required|string|max:255',
+            'poster' => 'required|uuid|exists:uploads,uuid',
+            'image' => 'required|uuid|exists:uploads,uuid',
         ];
     }
 }
