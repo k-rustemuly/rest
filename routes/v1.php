@@ -5,6 +5,7 @@ use App\Http\Controllers\ItemController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Portal\CategoryController as PortalCategoryController;
 use App\Http\Controllers\Portal\ItemController as PortalItemController;
+use App\Http\Controllers\Portal\Restaurant\MenuCategoryController;
 use App\Http\Controllers\Portal\RestaurantController as PortalRestaurantController;
 use App\Http\Controllers\Portal\UploadController;
 use App\Http\Controllers\RestaurantController;
@@ -40,6 +41,8 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setlo
         Route::middleware(['auth:sanctum'])->group(function () {
 
             Route::apiResource('restaurants', PortalRestaurantController::class)->middleware('role:Super Admin');
+
+            Route::apiResource('restaurants.categories', MenuCategoryController::class)->middleware('role:Super Admin');
 
             Route::apiResource('categories', PortalCategoryController::class)->middleware('role:Super Admin');
 
